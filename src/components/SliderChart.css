@@ -1,0 +1,77 @@
+
+.horizontal-slider {
+    width: 100%;
+    max-width: 20em;
+    height: 5vh;
+    margin-left: 1em;
+    /* margin: auto;
+background-color: ; */
+    align-items: center;
+  }
+  .example-thumb {
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    background: #ffffff;
+    border: 5px solid #3774ff;
+    border-radius: 100%;
+    display: block;
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+  }
+  .example-thumb.active {
+    background-color: grey;
+  }
+  .example-track {
+    position: relative;
+    background: #ddd;
+  }
+  .example-track.example-track-0 {
+    background: #83a9ff;
+  }
+  .horizontal-slider .example-track {
+    top: 20px;
+    height: 4px;
+  }
+  .horizontal-slider .example-thumb {
+    top: 12px;
+    width: 10px;
+    outline: none;
+    height: 10px;
+    line-height: 38px;
+  }
+  .sliderWrapper{
+     display: flex;
+     /* width: 20vw; */
+     flex-direction: row;
+     align-items: center;
+     /* background-color: blueviolet; */
+  }
+  .costDesignSys{
+      margin-top: 1em;
+  }
+  .slideMargin{
+      margin:1em 0 0 1.5em;
+  }
+
+  /* Chart */
+
+  #chart{
+    width: 70vw;
+    height: 50vh;
+}
+  .c3-line {
+    stroke-width: 3px;
+    }
+
+    .c3-axis-y > .tick,.c3-axis-y-label {
+        fill: #e74c3c;                       
+    }
+    .c3-axis-y2 > .tick,.c3-axis-y2-label{
+        fill: #2980b9;  
+    }
+    /* .c3 .c3-grid line{
+        stroke-dasharray:0;
+    } */
+
+
+    svg text { font-size: 15px; }
