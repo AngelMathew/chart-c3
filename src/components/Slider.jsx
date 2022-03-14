@@ -4,13 +4,13 @@ import ReactSlider from 'react-slider';
 
 
 const Slider=(props)=>{
-
+const yearOne=100000000
     const designSystemCost=[
-        {year:"Y1",default:5000000},
-        {year:"Y2",default:2000000},
-        {year:"Y3",default:1000000},
-        {year:"Y4",default:500000},
-        {year:"Y5",default:125000}
+        {year:"Y1",default:yearOne},
+        {year:"Y2",default:yearOne/2.5},
+        {year:"Y3",default:yearOne/5},
+        {year:"Y4",default:yearOne/10},
+        {year:"Y5",default:yearOne/25}
     ]
     const sendFlowTime = (a) => {
         props.parentCallbackFlowTime(a);
@@ -35,7 +35,7 @@ const Slider=(props)=>{
                 <ReactSlider
                 className="horizontal-slider"
                 thumbClassName={"example-thumb example-thumb"+item.id}
-                trackClassName="example-track"
+                trackClassName={" example-track example-track"+item.id}
                 onChange={item.change}
                 defaultValue={item.default}
                 max={item.max} 

@@ -11,7 +11,7 @@
     position: absolute;
     z-index: 100;
     background: #ffffff;
-    border: 5px solid #147759;
+    border: 5px solid #34495E;
     border-radius: 100%;
     display: block;
     box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
@@ -23,9 +23,24 @@
  
   .example-track {
     position: relative;
-    background: #ddd;
+    background: #34495E;
   }
   .example-track.example-track-0 {
+    background: #34495E;
+  }
+  .example-track1 {
+    background: #147759;
+  }
+  .example-thumb1 {
+    border: 5px solid #147759;
+  }
+  .example-thumb2 {
+    border: 5px solid #585486;
+  }
+  .example-track2 {
+    background: #585486;
+  }
+  .example-track1 {
     background: #147759;
   }
   .horizontal-slider .example-track {
@@ -73,10 +88,10 @@
     }
 
     .c3-axis-y > .tick,.c3-axis-y-label {
-        fill: #2980b9;
+        fill: #585486;
     }
     .c3-axis-y2 > .tick,.c3-axis-y2-label{
-        fill: #e74c3c;
+        fill: #D95F02;
     }
     .c3-axis-x-label {
       transform: translate(0px,7px);

@@ -49,8 +49,8 @@ export const Chart = () => {
                     value:['increaseThroughput','roi'],
                 },
                 colors:{
-                    increaseThroughput:'#2980b9',
-                    roi: '#e74c3c'
+                    increaseThroughput:'#585486',
+                    roi: '#D95F02'
                 },
                 axes: {
                     'roi': 'y2'
@@ -63,6 +63,14 @@ export const Chart = () => {
             legend: {
                 show: false
             },
+            tooltip: {
+                format: {
+                    title: function (d) { return 'Data ' + d; },
+                    name: (value)=> {
+                        if (value==="increaseThroughput")return "Increase in throughput ($MM)";
+                        else return 'ROI ($ Return per $ Invested in DS)'
+                    }
+                }},
             
             axis: {
                 x: {
