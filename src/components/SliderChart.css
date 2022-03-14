@@ -4,8 +4,6 @@
     max-width: 20em;
     height: 5vh;
     margin-left: 1em;
-    /* margin: auto;
-background-color: ; */
     align-items: center;
   }
   .example-thumb {
@@ -13,20 +11,22 @@ background-color: ; */
     position: absolute;
     z-index: 100;
     background: #ffffff;
-    border: 5px solid #3774ff;
+    border: 5px solid #147759;
     border-radius: 100%;
     display: block;
     box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+    margin-bottom: 5px;
   }
   .example-thumb.active {
-    background-color: grey;
+    background-color: #ffffff;
   }
+ 
   .example-track {
     position: relative;
     background: #ddd;
   }
   .example-track.example-track-0 {
-    background: #83a9ff;
+    background: #147759;
   }
   .horizontal-slider .example-track {
     top: 20px;
@@ -37,14 +37,16 @@ background-color: ; */
     width: 10px;
     outline: none;
     height: 10px;
-    line-height: 38px;
+    line-height: 48px;
+  }
+  .horizontal-slider .example-thumb::before {
+    content: '$''\00a0';
   }
   .sliderWrapper{
      display: flex;
-     /* width: 20vw; */
      flex-direction: row;
      align-items: center;
-     /* background-color: blueviolet; */
+     margin-bottom: .5em;
   }
   .costDesignSys{
       margin-top: 1em;
@@ -56,9 +58,10 @@ background-color: ; */
   /* Chart */
 
   #chart{
+    padding:1em 0;
     width: 70vw;
     height: 50vh;
-}
+  }
   .c3-line {
     stroke-width: 3px;
     }
@@ -69,9 +72,8 @@ background-color: ; */
     .c3-axis-y2 > .tick,.c3-axis-y2-label{
         fill: #2980b9;  
     }
-    /* .c3 .c3-grid line{
-        stroke-dasharray:0;
-    } */
-
-
-    svg text { font-size: 15px; }
+    .c3-axis-x-label {
+      transform: translate(0px,7px);
+    }
+    svg text { font-size: 15px;};
+    

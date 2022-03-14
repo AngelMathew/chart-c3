@@ -1,7 +1,7 @@
-import React, {useRef, useEffect} from 'react';
-import * as d3 from "d3";
+import React from 'react';
 import './SliderChart.css'
 import ReactSlider from 'react-slider';
+
 
 const Slider=(props)=>{
 
@@ -21,60 +21,52 @@ const Slider=(props)=>{
     const sendYear = (a,n) => {
         props.parentCallbackYears({"year":parseInt(a.year.slice(1)),"value":n});
     }
+    const initialValues=[
+        {id:1,title:"Flow time",change:sendFlowTime,max:999,min:1,default:30},
+        {id:2,title:"Revenue per initiative",change:sendTHpi,max:999999999,min:1,default:5000000},
+    ]
 
     return(
         <>
-        <div className="sliderWrapper">
-        <span>Flow Time</span>
-        <ReactSlider
-        className="horizontal-slider"
-        thumbClassName="example-thumb"
-        trackClassName="example-track"
-        onChange={sendFlowTime}
-        defaultValue={30}
-        renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>
-        }
-        />
-        </div>
-        <div className="sliderWrapper">
-        <span>Revenue per Initiative</span>
-        <ReactSlider
-        className="horizontal-slider"
-        thumbClassName="example-thumb"
-        trackClassName="example-track"
-        onChange={sendTHpi}
-        max={999999999} 
-        min={1}
-        defaultValue={5000000}
-        renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>
-        }
-        />
-        </div>
-        <div className="costDesignSys">
-        <span>Cost of design system</span>
-     
-            {designSystemCost.map((n)=>(
-                <div className="sliderWrapper slideMargin" key={n.year}>
-                <span>{n.year}</span>
+            {initialValues.map((item)=>(
+            <div className="sliderWrapper" key={item.id}>
+        
+                <span>{item.title}</span>
                 <ReactSlider
                 className="horizontal-slider"
                 thumbClassName="example-thumb"
                 trackClassName="example-track"
-                onChange={(props) => sendYear(n,props)}
-                max={999999999} 
-                // step={10} 
-                min={1}
-                defaultValue={n.default}
+                onChange={item.change}
+                defaultValue={item.default}
+                max={item.max} 
+                min={item.min}
                 renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>
                 }
                 />
-                </div>
+            </div>
             ))}
-        </div>
+     
+            <div className="costDesignSys">
+                <span>Cost of design system</span>
+                {designSystemCost.map((n)=>(
+                    <div className="sliderWrapper slideMargin" key={n.year}>
+                    <span>{n.year}</span>
+                    <ReactSlider
+                    className="horizontal-slider"
+                    thumbClassName="example-thumb"
+                    trackClassName="example-track"
+                    onChange={(props) => sendYear(n,props)}
+                    max={999999999} 
+                    min={1}
+                    defaultValue={n.default}
+                    renderThumb={(props, state) => <div {...props}>{state.valueNow.toLocaleString("en-US")}</div>
+                    }
+                    />
+                    </div>
+                ))}
+            </div>
     </>
     )
-
-
 }
 
 export default Slider;

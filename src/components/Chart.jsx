@@ -85,7 +85,8 @@ export const Chart = () => {
                 y2: {
                     min : 0,
                     padding : {
-                        bottom : 0
+                        bottom : 0,
+                        top : 0
                     },
                     label: {
                         text: "ROI ($ Return per $ Invested in DS)",
