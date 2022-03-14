@@ -66,16 +66,18 @@ export const Chart = () => {
             
             axis: {
                 x: {
-                    ticks:false,
+                    tick: {
+                        outer: false
+                    },
                     label: {
                         text: "Year",
                         position: "outer-center"
-                        
                     }
                 },
                 "y": {
                     tick: {
-                    format:  (x)=> { return  '$ '+ x.toLocaleString("en-US")}
+                        format:  (x)=> { return  '$ '+ x.toLocaleString("en-US")},
+                        outer: false
                     },
                     label: {
                         text: "Increase in throughput ($MM)",
@@ -83,6 +85,9 @@ export const Chart = () => {
                     }
                 },
                 y2: {
+                    tick: {
+                        outer: false
+                    },
                     min : 0,
                     padding : {
                         bottom : 0,
