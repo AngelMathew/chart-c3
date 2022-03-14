@@ -49,8 +49,8 @@ export const Chart = () => {
                     value:['increaseThroughput','roi'],
                 },
                 colors:{
-                    increaseThroughput:'#e74c3c',
-                    roi:'#2980b9'
+                    increaseThroughput:'#2980b9',
+                    roi: '#e74c3c'
                 },
                 axes: {
                     'roi': 'y2'
@@ -86,6 +86,7 @@ export const Chart = () => {
                 },
                 y2: {
                     tick: {
+                        format:  (x)=> { return  '$ '+ x.toLocaleString("en-US")},
                         outer: false
                     },
                     min : 0,

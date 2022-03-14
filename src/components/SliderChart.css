@@ -73,10 +73,10 @@
     }
 
     .c3-axis-y > .tick,.c3-axis-y-label {
-        fill: #e74c3c;                       
+        fill: #2980b9;
     }
     .c3-axis-y2 > .tick,.c3-axis-y2-label{
-        fill: #2980b9;  
+        fill: #e74c3c;
     }
     .c3-axis-x-label {
       transform: translate(0px,7px);
