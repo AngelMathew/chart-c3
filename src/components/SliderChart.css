@@ -42,6 +42,12 @@
   .horizontal-slider .example-thumb::before {
     content: '$''\00a0';
   }
+  .horizontal-slider .example-thumb1::before {
+    content: none;
+  }
+  .horizontal-slider .example-thumb1::after {
+    content: '\00a0''days';
+  }
   .sliderWrapper{
      display: flex;
      flex-direction: row;

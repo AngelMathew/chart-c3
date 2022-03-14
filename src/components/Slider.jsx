@@ -34,13 +34,13 @@ const Slider=(props)=>{
                 <span>{item.title}</span>
                 <ReactSlider
                 className="horizontal-slider"
-                thumbClassName="example-thumb"
+                thumbClassName={"example-thumb example-thumb"+item.id}
                 trackClassName="example-track"
                 onChange={item.change}
                 defaultValue={item.default}
                 max={item.max} 
                 min={item.min}
-                renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>
+                renderThumb={(props, state) => <div {...props}>{state.valueNow.toLocaleString("en-US")}</div>
                 }
                 />
             </div>
