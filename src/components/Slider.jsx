@@ -4,7 +4,7 @@ import ReactSlider from 'react-slider';
 
 
 const Slider=(props)=>{
-const yearOne=50000000
+const yearOne=5000000
     const designSystemCost=[
         {year:"Y1",default:yearOne},
         {year:"Y2",default:yearOne/2.5},
@@ -22,8 +22,8 @@ const yearOne=50000000
         props.parentCallbackYears({"year":parseInt(a.year.slice(1)),"value":n});
     }
     const initialValues=[
-        {id:1,title:"Flow time",change:sendFlowTime,max:999,min:1,default:30},
-        {id:2,title:"Revenue per initiative",change:sendTHpi,max:999999999,min:1,default:5000000},
+        {id:1,title:"Flow time",change:sendFlowTime,max:270,min:1,default:30,step:1},
+        {id:2,title:"Revenue per initiative",change:sendTHpi,max:100000000,min:0,default:5000000,step:25000},
     ]
 
     return(
@@ -38,6 +38,7 @@ const yearOne=50000000
                 trackClassName={" example-track example-track"+item.id}
                 onChange={item.change}
                 defaultValue={item.default}
+                step={item.step}
                 max={item.max} 
                 min={item.min}
                 renderThumb={(props, state) => <div {...props}>{state.valueNow.toLocaleString("en-US")}</div>
@@ -47,7 +48,7 @@ const yearOne=50000000
             ))}
      
             <div className="costDesignSys">
-                <span>Cost of design system</span>
+                <span>Costs of design system</span>
                 {designSystemCost.map((n)=>(
                     <div className="sliderWrapper slideMargin" key={n.year}>
                     <span>{n.year}</span>
@@ -56,8 +57,9 @@ const yearOne=50000000
                     thumbClassName="example-thumb"
                     trackClassName="example-track"
                     onChange={(props) => sendYear(n,props)}
-                    max={999999999} 
-                    min={1}
+                    step={2500}
+                    max={10000000} 
+                    min={2500}
                     defaultValue={n.default}
                     renderThumb={(props, state) => <div {...props}>{state.valueNow.toLocaleString("en-US")}</div>
                     }
