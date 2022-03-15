@@ -4,7 +4,7 @@ import ReactSlider from 'react-slider';
 
 
 const Slider=(props)=>{
-const yearOne=100000000
+const yearOne=50000000
     const designSystemCost=[
         {year:"Y1",default:yearOne},
         {year:"Y2",default:yearOne/2.5},
