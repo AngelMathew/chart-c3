@@ -1,0 +1,133 @@
+
+.horizontal-slider {
+    width: 100%;
+    max-width: 20em;
+    height: 5vh;
+    margin-left: 1em;
+    align-items: center;
+  }
+  .example-thumb {
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    background: #ffffff;
+    border: 5px solid #34495E;
+    border-radius: 100%;
+    display: block;
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+    margin-bottom: 5px;
+  }
+  .example-thumb3 {/* DS */
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    background: #ffffff;
+    border: 5px solid #34495e;
+    border-radius: 100%;
+    display: block;
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+    margin-bottom: 5px;
+  }
+  .example-thumb.active {
+    background-color: #ffffff;
+  }
+ 
+  .example-track {
+    position: relative;
+    background: #34495E;
+  }
+  .example-track.example-track-0 {
+    background: #34495E;
+  }
+  .example-track1 {
+    background: #147759;
+  }
+  .example-thumb1 {
+    border: 5px solid #147759;
+  }
+  .example-thumb2 {
+    border: 5px solid #585486;
+  }
+  .example-track2 {
+    background: #585486;
+  }
+  .example-track1 {
+    background: #147759;
+  }
+  .example-thumb3 {
+    border: 5px solid #34495e;
+  }
+  .example-track3 {
+    background: #34495e;
+  }
+  .horizontal-slider .example-track {
+    top: 20px;
+    height: 4px;
+  }
+  .horizontal-slider .example-thumb {
+    top: 12px;
+    width: 10px;
+    outline: none;
+    height: 10px;
+    line-height: 48px;
+  }
+  .horizontal-slider .example-thumb::before {
+    content: '$''\00a0';
+  }
+  .horizontal-slider .example-thumb1::before {
+    content: none;
+  }
+  .horizontal-slider .example-thumb1::after {
+    content: '\00a0''days';
+  }
+  .horizontal-slider .example-track3 {
+    top: 20px;
+    height: 4px;
+  }
+  .horizontal-slider .example-thumb3 {
+    top: 12px;
+    width: 10px;
+    outline: none;
+    height: 10px;
+    line-height: 48px;
+  }
+  .horizontal-slider .example-thumb3::before {
+    content: '$''\00a0';
+  }
+  .sliderWrapper{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     margin-bottom: .5em;
+  }
+  .costDesignSys{
+      margin-top: 3em;
+  }
+  .slideMargin{
+      margin:1em 0 0 1.5em;
+  }
+  .slideMargin3{
+      margin:0.5em 0 0 1em;
+  }
+  /* Chart */
+
+  #chart{
+    padding:1em 0;
+    width: 70vw;
+    height: 50vh;
+  }
+  .c3-line {
+    stroke-width: 3px;
+    }
+
+    .c3-axis-y > .tick,.c3-axis-y-label {
+        fill: #585486;
+    }
+    .c3-axis-y2 > .tick,.c3-axis-y2-label{
+        fill: #D95F02;
+    }
+    .c3-axis-x-label {
+      transform: translate(0px,7px);
+    }
+    svg text { font-size: 15px;};
+    
