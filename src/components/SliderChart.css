@@ -17,6 +17,17 @@
     box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
     margin-bottom: 5px;
   }
+  .example-thumb3 {/* DS */
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    background: #ffffff;
+    border: 5px solid #34495e;
+    border-radius: 100%;
+    display: block;
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+    margin-bottom: 5px;
+  }
   .example-thumb.active {
     background-color: #ffffff;
   }
@@ -43,6 +54,12 @@
   .example-track1 {
     background: #147759;
   }
+  .example-thumb3 {
+    border: 5px solid #34495e;
+  }
+  .example-track3 {
+    background: #34495e;
+  }
   .horizontal-slider .example-track {
     top: 20px;
     height: 4px;
@@ -63,6 +80,20 @@
   .horizontal-slider .example-thumb1::after {
     content: '\00a0''days';
   }
+  .horizontal-slider .example-track3 {
+    top: 20px;
+    height: 4px;
+  }
+  .horizontal-slider .example-thumb3 {
+    top: 12px;
+    width: 10px;
+    outline: none;
+    height: 10px;
+    line-height: 48px;
+  }
+  .horizontal-slider .example-thumb3::before {
+    content: '$''\00a0';
+  }
   .sliderWrapper{
      display: flex;
      flex-direction: row;
@@ -70,12 +101,14 @@
      margin-bottom: .5em;
   }
   .costDesignSys{
-      margin-top: 1em;
+      margin-top: 3em;
   }
   .slideMargin{
       margin:1em 0 0 1.5em;
   }
-
+  .slideMargin3{
+      margin:0.5em 0 0 1em;
+  }
   /* Chart */
 
   #chart{

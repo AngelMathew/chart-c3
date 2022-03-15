@@ -3,6 +3,7 @@ import c3 from "c3";
 import "c3/c3.css";
 import Slider from './Slider'
 
+
 export const Chart = () => {
 
     const [sliderFlowTime,setSliderValue]=useState(30)
@@ -35,8 +36,8 @@ export const Chart = () => {
             if(sliderDsCost.year===(i+1)){
                 data.dsCost=sliderDsCost.value
             }
-            data.increaseThroughput=(((365/flowTime)-(365/sliderFlowTime))*sliderTHpi);
-            data.roi=data.increaseThroughput/data.dsCost;
+            data.increaseThroughput=((((365/flowTime)-(365/sliderFlowTime))*sliderTHpi)).toFixed(2);
+            data.roi=(data.increaseThroughput/data.dsCost).toFixed(2);
             return data
         })
       

@@ -48,14 +48,14 @@ const yearOne=5000000
             ))}
      
             <div className="costDesignSys">
-                <span>Costs of design system</span>
+                <span> <p align="left"> Costs of design system </p> </span>
                 {designSystemCost.map((n)=>(
-                    <div className="sliderWrapper slideMargin" key={n.year}>
+                    <div className="sliderWrapper slideMargin3" key={n.year}>
                     <span>{n.year}</span>
                     <ReactSlider
                     className="horizontal-slider"
-                    thumbClassName="example-thumb"
-                    trackClassName="example-track"
+                    thumbClassName="example-thumb3"
+                    trackClassName="example-track3"
                     onChange={(props) => sendYear(n,props)}
                     step={2500}
                     max={10000000} 
