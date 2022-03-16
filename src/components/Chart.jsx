@@ -36,8 +36,8 @@ export const Chart = () => {
             if(sliderDsCost.year===(i+1)){
                 data.dsCost=sliderDsCost.value
             }
-            data.increaseThroughput=((((365/flowTime)-(365/sliderFlowTime))*sliderTHpi)).toFixed(2);
-            data.roi=(data.increaseThroughput/data.dsCost).toFixed(2);
+            data.increaseThroughput=Math.round((((365/flowTime)-(365/sliderFlowTime))*sliderTHpi));
+            data.roi=Math.round(data.increaseThroughput/data.dsCost);
             return data
         })
       
